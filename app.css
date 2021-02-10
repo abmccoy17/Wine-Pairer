@@ -168,7 +168,7 @@ body {
 @media (max-width: 400px) {
     #searchForm {
     display: grid;
-    grid-template-columns: 1fr 100px 100px 1fr;
+    grid-template-columns: 1fr 125px 125px 1fr;
     grid-template-rows: 200px 10px 200px 100px 60px;
     grid-template-areas:
     ". header . ."
