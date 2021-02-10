@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Pairing</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css">
+    
+</head>
+<body>
+    <form id="searchForm">
+        <h1 id="header">Wine Pairing</h1>
+        <div id="divider"></div>
+        <h2 id="instructions">Having a nice meal and have no clue what wine drink? Not a problem! In the space below, enter a specific dish or cuisine to see what would best pair with your meal.</h2>
+        <input type="text" placeholder="Dish or Cuisine Type" name="query" id="input">
+        <button type="submit" class="btn btn-primary" id="pairingBtn">Get Pairing</button>
+        <button type="button" class="btn btn-primary" id="clearResultsBtn">Clear Results</button>
+    </form>
+    
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
