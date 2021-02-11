@@ -11,16 +11,20 @@ form.addEventListener("submit", async function (e) {
     makeWine(res.data);
     form.elements.query.value = "";
   } catch (err) {
-    alert("Error, please try again later", err);
+    alert("We couldn't find a perfect match. Either try being more specific or try a different dish or cuisine");
   }
 });
 
 const makeWine = (result) => {
   if (
-    result.productMatches.length > 0 &&
-    result.productMatches[0].title !== "null"
-  ) {
-    const cardDiv = document.createElement("div");
+    result.productMatches.length > 0 && result.productMatches[0].title !== "null") {
+      if (document.body.childNodes.length = 14) {
+        let elements = document.querySelectorAll(".card");
+        for (element of elements) {
+          element.remove();
+        }
+      }
+    let cardDiv = document.createElement("div");
     cardDiv.className = "card text-center";
     const wineHeader = document.createElement("h2");
     const img = document.createElement("img");
@@ -34,12 +38,7 @@ const makeWine = (result) => {
     cardDiv.append(wineHeader, img, wineText);
     document.body.append(cardDiv);
   } else if (result.productMatches.length == 0) {
-    const cardDiv = document.createElement("div");
-    cardDiv.className = "card text-center";
-    const wineText = document.createElement("p");
-    wineText.innerHTML = result.pairingText;
-    cardDiv.append(wineText);
-    document.body.append(cardDiv);
+    alert("We couldn't find a perfect match. Either try being more specific or try a different dish or cuisine")
   }
 };
 
